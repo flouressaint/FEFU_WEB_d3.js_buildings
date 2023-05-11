@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+</head>
+
+<body>
+    <h3>Список самых высоких зданий</h3>
+    <div>
+        <form>
+            <p>Значениe по оси OX</p>
+            <input type="radio" name="ox" id="oxCountry" value="Страна" checked>Страна<br> <input type="radio" name="ox"
+                id="oxYear" value="Год">Год<br>
+            <p>Значениe по оси OY</p>
+            <input type="checkbox" id="oyMax" checked>Максимальная высота<br> <input type="checkbox"
+                id="oyMin">Минимальная высота<br>
+            <p>Тип диаграммы</p>
+            <input type="radio" name="diag" id="dots" value="точечная" checked>точечная<br> <input type="radio"
+                name="diag" id="column" value="столбчатая">столбчатая<br>
+            <p>
+                <input type=button id="createGraph" value="Построить" onclick="drawGraph()">
+            </p>
+        </form>
+        <div id="graph"></div>
+        <svg height="5">
+        </svg>
+    </div>
+    <div class="table">
+        <p>
+            <input type=button id="showTable" value="Показать таблицу">
+        </p>
+        <table>
+        </table>
+    </div>
+</body>
+
+<script src="data.js"></script>
+<script src="program.js"></script>
+
+</html>
