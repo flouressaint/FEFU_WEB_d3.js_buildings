@@ -129,7 +129,7 @@ function drawGraph(data) {
         })
         .attr("width", scaleX.bandwidth())
         .attr("height", function (d) {
-          return scaleY(d.valueMax);
+          return yAxisLen - scaleY(d.valueMax);
         })
         .attr("transform", `translate(${marginX}, ${marginY})`)
         .style("fill", "red");
@@ -148,7 +148,7 @@ function drawGraph(data) {
         })
         .attr("width", scaleX.bandwidth())
         .attr("height", function (d) {
-          return scaleY(d.valueMin);
+          return yAxisLen - scaleY(d.valueMin);
         })
         .attr("transform", `translate(${marginX}, ${marginY})`)
         .style("fill", "blue");
